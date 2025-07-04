@@ -1,0 +1,212 @@
+/* Réinitialisation des styles */
+*,
+::before,
+::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* MES VARIABLES DE COULEUR */
+:root{
+    --black: #000;
+    --black-50: rgba(0, 0, 0, 0.5);
+    --black-700: #1d1d1d;
+    --white: #fff;
+    --gray-50: #ededed;
+    --gray-200: #cdcdcd;
+    --gray-800: #676767;
+}
+::selection{
+    background-color: var(--black-700);
+    color: white;
+}
+
+/* Styles de base */
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    background-color: var(--gray-50);
+}
+img{
+    width: 100%;
+    object-fit: cover;
+}
+a{
+    display: inline-block;
+    text-decoration: none;
+    color: var(--black);
+}
+ul{
+    list-style: none;
+}
+h1{
+    line-height: 1.3;
+}
+p{
+    line-height: 1.4;
+}
+.flex{
+    display: flex;
+}
+
+/* ENTETE DU SITE */
+.banniere{
+    min-height: 100vh;
+    position: relative;
+}
+.banniere::before{
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 105vh;
+    height: 100%;
+    background-color: var(--black);
+    z-index: -1;
+    clip-path: polygon(12.5% 0%, 100% 0%, 99.1% 100%, 0% 100%);
+
+}
+#main-header{
+    padding: 30px 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#main-header #title{
+    font-size: 1.75rem;
+}
+#main-header nav ul.flex{
+    align-items: center;
+    gap: 50px;
+}
+#main-header nav ul.flex a{
+    color: var(--white);
+    position: relative;
+}
+#main-header nav ul.flex li:nth-child(1) a::before,
+#main-header nav ul.flex li:nth-child(2) a::before,
+#main-header nav ul.flex li:nth-child(3) a::before{
+    content: "";
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 100%;
+    height: 2px;
+    border-radius: 9999px;
+    background-color: white;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.2s linear;
+}
+#main-header nav ul.flex li:nth-child(1) a:hover::before,
+#main-header nav ul.flex li:nth-child(2) a:hover::before,
+#main-header nav ul.flex li:nth-child(3) a:hover::before{
+    transform: scaleX(1);
+}
+#main-header nav ul.flex a#active{
+    padding: 12px 20px;
+    background-color: var(--white);
+    color: var(--black);
+    border-radius: 9999px;
+    text-transform: uppercase;
+}
+
+/* SECTION PRESENTATION */
+#section-presentation {
+    padding: 0 80px;
+    display: flex;
+    gap: 350px;
+}
+#section-presentation div.firstelement{
+    margin-top: 100px;
+}
+#section-presentation div:first-of-type p:first-of-type{
+    font-size: 1.125rem;
+    font-weight: 700;
+}
+#section-presentation div:first-of-type h1{
+    font-size: 2.875rem;
+    margin-top: 30px;
+    letter-spacing: 3px;
+}
+#section-presentation div:first-of-type p:last-of-type{
+    color: var(--gray-800);
+    font-weight: 700;
+}
+#section-presentation .reseaux-contact{
+    margin-top: 80px;
+    align-items: center;
+    gap: 15px;
+}
+#section-presentation .reseaux-contact a{
+    width: 50px;
+    height: 50px;
+    display: grid;
+    place-content: center;
+    background-color: var(--gray-200);
+    box-shadow: 0 1px 1px var(--black-50),
+                -0 -0 1px var(--black-50);
+    border-radius: 4px;
+}
+#section-presentation .position-relative{
+    position: relative;
+}
+#section-presentation .description-image{
+    max-width: 150px;
+    position: absolute;
+    right: 220px;
+    bottom: 20px;
+    line-height: 1.3;
+}
+
+/* SECTION BERRIES */
+#section-berries{
+    height: max-content;
+    background: var(--black-700) url(images/logoITB.png) no-repeat 100% 0%;
+}
+#section-berries div:nth-child(1){
+    max-width: 1000px;
+    padding: 30px 50px;
+}
+#section-berries h1{
+    margin-bottom: 14px;
+    color: var(--white);
+}
+#section-berries p{
+    color: var(--white);
+}
+#section-berries .ctn-btn{
+    margin-top: 30px;
+}
+#section-berries .ctn-btn a{
+    padding: 10px 14px;
+    color: var(--white);
+    border-left: 3px solid var(--white);
+    border-right: 3px solid var(--white);
+    position: relative;
+    z-index: 1;
+}
+#section-berries .ctn-btn a::before{
+    content: "";
+    display: inline-block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-color: var(--white);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 300ms ease-in-out;
+}
+#section-berries .ctn-btn a:hover{
+    color: var(--black);
+}
+#section-berries .ctn-btn a:hover::before{
+    transform: scaleX(1);
+}
