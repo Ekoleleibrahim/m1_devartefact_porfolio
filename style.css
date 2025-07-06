@@ -89,17 +89,20 @@ p{
     transform: scaleX(1);
 }
 #section-about h1,
-#section-skills h1{
+#section-skills h1,
+#section-contact h1{
     width: 200px;
     border: 5px solid var(--black);
     padding: 10px;
     margin-bottom: 30px;
     text-align: center;
 }
+.separate-black{
+    margin-top: 100px;
+}
 
 /* ENTETE DU SITE */
 .banniere{
-    min-height: 100vh;
     position: relative;
 }
 .banniere::before{
@@ -314,8 +317,9 @@ p{
 }
 #section-skills .grid-one-section-skills figure:nth-child(even),
  #section-skills .grid-one-section-skills figure:nth-child(odd){
-    display: grid;
-    place-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 #section-skills .grid-one-section-skills figure img{
     width: 60px;
@@ -325,4 +329,93 @@ p{
 #section-skills .grid-one-section-skills figure .mongodb{
     width: 35px;
     height: auto;
+}
+
+/* SECTION CONTACT */
+#section-contact{
+    max-width: 1200px;
+    padding: 80px 50px;
+    margin: 0 auto;
+}
+#section-contact header{
+    display: grid;
+    place-items: center;
+}
+#section-contact header p{
+    text-align: center;
+}
+#section-contact .separate-black{
+    margin-top: 20px;
+}
+#section-contact form{
+    max-width: 600px;
+    width: 100%;
+    margin: 80px auto 0;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+#section-contact form input,
+#section-contact form textarea{
+    display: inline-block;
+    width: 100%;
+    padding: 15px;
+    font-size: 0.875rem;
+    border: none;
+    outline: none;
+    background-color: var(--gray-50);
+    border-left: 4px solid var(--black);
+    border-bottom: 4px solid var(--black);
+}
+#section-contact form textarea{
+    resize: none;
+    height: 150px;
+}
+#section-contact form input::placeholder,
+#section-contact form textarea::placeholder{
+    text-transform: uppercase;
+    font-weight: 700;
+}
+#section-contact form div:nth-child(5){
+    align-self: center;
+}
+#section-contact form button{
+    display: inline-block;
+    border: none;
+    outline: none;
+    width: 200px;
+    padding: 10px;
+    margin-top: 10px;
+    font-weight: 700;
+    color: var(--black);
+    border-left: 3px solid var(--black);
+    border-right: 3px solid var(--black);
+    background-color: var(--gray-50);
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+}
+#section-contact form button::before{
+    content: "";
+    display: inline-block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-color: var(--black);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 300ms ease-in-out;
+}
+#section-contact form button:hover{
+    color: var(--white);
+}
+#section-contact form button:focus{
+    outline: 2px solid var(--black-700);
+    outline-offset: 2px;
+}
+#section-contact form button:hover::before{
+    transform: scaleX(1);
 }
