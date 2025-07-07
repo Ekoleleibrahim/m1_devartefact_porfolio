@@ -121,6 +121,7 @@ p{
 
 }
 #main-header{
+    width: 100%;
     padding: 30px 80px;
     display: flex;
     align-items: center;
@@ -209,8 +210,8 @@ p{
 #section-presentation .description-image{
     max-width: 150px;
     position: absolute;
-    left: 120px;
-    bottom: 20px;
+    right: 220px;
+    bottom: 10px;
     line-height: 1.3;
 }
 
@@ -466,7 +467,6 @@ footer span{
         z-index: -50;
         clip-path: none;
         display: none;
-
     }
     #main-header nav ul.flex a{
         color: var(--black);
@@ -521,7 +521,7 @@ footer span{
     }
 }
 
-@media (width <= 782px){
+@media (width <= 885px){
     /* ENTETE DU SITE */
     #main-header{
         padding: 30px;
@@ -529,11 +529,55 @@ footer span{
         align-items: center;
         justify-content: space-between;
     }
+    /* SECTION PRESENTATION */
     #section-presentation {
-        padding: 0 24px;
+        padding: 0 40px 30px;
+        gap: 30px;
+        flex-direction: column;
+        background-color: var(--black);
+    }
+    #section-presentation div.firstelement{
+        margin-top: 0;
+        order: 1;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    #section-presentation .reseaux-contact{
+        margin-top: 30px;
         flex-direction: column;
     }
-    /* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ */
+    #section-presentation .reseaux-contact a{
+        width: auto;
+        height: auto;
+        display: grid;
+        place-content: center;
+        background-color: transparent;
+        box-shadow: none;
+        border-radius: 0;
+    }
+    #section-presentation .reseaux-contact i{
+        width: 14px;
+    }
+    #section-presentation div:first-of-type h1{
+        font-size: 2rem;
+        margin-top: 0;
+    }
+    #section-presentation div:first-of-type h1,
+    #section-presentation div:first-of-type p:first-of-type,
+    #section-presentation div:first-of-type p:last-of-type{
+        color: var(--white);
+    }
+    #section-presentation .position-relative{
+        align-self: flex-end;
+    }
+    #section-presentation img{
+        width: 400px;
+    }
+    #section-presentation .description-image{
+        display: none;
+    }
+
 }
 
 @media (width <= 640px){
@@ -585,6 +629,13 @@ footer span{
 }
 
 @media (width <= 600px){
+    nav{
+        display: none;
+    }
+    /* SECTION PRESENTATION */
+    #section-presentation .position-relative{
+        align-self: center;
+    }
     /* SECTION ABOUT */
     #section-about{
         max-width: 1200px;
@@ -636,4 +687,4 @@ footer span{
     #section-skills .grid-one-section-skills{
         grid-template-columns: 100%;
     }
-}
+}-
