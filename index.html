@@ -201,6 +201,52 @@
         </section>
         <!-- SKILLS SECTION -->
 
+        <!-- PORTFOLIO SECTION -->
+        <section id="portfolio-section">
+            <header class="portfolio-header grid">
+                <h2>PORTFOLIO</h2>
+            </header>
+            <div class="flex flex-portfolio-one bg-black">
+                <div class="btn-all-project">ALL</div>
+                <div class="btn-coded-project">CODED</div>
+                <div class="btn-designed-project">DESIGNED</div>
+            </div>
+            <div class="grid grid-portfolio-two">
+                <div class="grid-element-one">
+                    <img class="my-portfolio-images" src="images/Project.png" alt="image effect">
+                </div>
+                <div class="position-relative grid-element-two">
+                    <img class="my-portfolio-images" src="images/Rectangle 17.png" alt="circle image effect">
+                    
+                    <div class="text-content-card flex">
+                        <p class="text-small">coded, designed</p>
+                        <h3 class="text-white">eatsome.</h3>
+                        <p class="text-small">Restaurant browsing in React.js (Using Yelp API)</p>
+                        <div class="ctn-btn flex">
+                            <a href="#">DEMO</a>
+                            <a href="#">MORE</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid-element-three">
+                    <img class="my-portfolio-images" src="images/Project(3).png" alt="car image">
+                </div>
+                <div class="grid-element-for">
+                    <img class="my-portfolio-images" src="images/Project(2).png" alt="circle image effect">
+                </div>
+                <div class="grid-element-five">
+                    <img class="my-portfolio-images" src="images/Project(1).png" alt="car image">
+                </div>
+                <div class="grid-element-six">
+                    <img class="my-portfolio-images" src="images/Project.png" alt="image effect">
+                </div>
+            </div>
+            <div class="bg-black content-text-black">
+                <p class="text-white">And many more to come!</p>
+            </div>
+        </section>
+        <!-- PORTFOLIO SECTION -->
+
         <!-- CONTACT SECTION -->
         <section id="contact-section">
             <header class="header-contact">
@@ -214,16 +260,16 @@
             <!-- Formulaire de contact -->
             <form autocomplete="off">
                 <div>
-                    <input type="text" id="name" placeholder="enter your name*">
+                    <input type="text" id="name" placeholder="enter your name*" required>
                 </div>
                 <div>
-                    <input type="email" id="email" placeholder="enter your email*">
+                    <input type="email" id="email" placeholder="enter your emai requiredl*">
                 </div>
                 <div>
-                    <input type="text" id="telephone" placeholder="phone number*">
+                    <input type="text" id="telephone" placeholder="phone number required*">
                 </div>
                 <div>
-                    <textarea id="message" placeholder="your message*"></textarea>
+                    <textarea id="message" placeholder="your message*" required></textarea>
                 </div>
                 <div>
                     <button type="submit" class="submit-button">SUBMIT</button>
@@ -236,7 +282,12 @@
     <!-- SITE FOOTER -->
     <footer class="flex flex-footer">
         <div>
-            <a href="#">BACK TO TOP</a>
+            <a href="#">
+                <span class="block-span">
+                    <img class="logo-return-top" src="images/return-top-page.svg" alt="logo return top the page">
+                </span>
+                <span class="text-weight-600">BACK TO TOP</span>
+            </a>
         </div>
         <div class="flex links-reseaux">
             <div>

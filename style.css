@@ -90,24 +90,32 @@ p{
 }
 .ctn-btn a:hover{
     color: var(--black);
+    border: none;
 }
 .ctn-btn a:hover::before{
     transform: scaleX(1);
 }
 #about-section h2,
 #skills-section h2,
-#contact-section h2{
+#contact-section h2,
+#portfolio-section h2{
     width: 200px;
     border: 5px solid var(--black);
     padding: 10px;
-    margin-bottom: 30px;
+    margin: 0 auto 30px;
     text-align: center;
 }
 .separate-black{
     margin-top: 100px;
 }
+.bg-black{
+    background-color: var(--black-700);
+}
+.text-white{
+    color: var(--white);
+}
 
-/* ENTETE DU SITE */
+/* SITE HEADER */
 .wrapper{
     position: relative;
 }
@@ -300,9 +308,6 @@ p{
     display: flex;
     flex-direction: column;
 }
-#skills-section h2{
-    align-self: center;
-}
 #skills-section .content-skills{
     flex-direction: column;
     gap: 50px;
@@ -333,6 +338,78 @@ p{
     height: auto;
 }
 
+/* PORTFOLIO SECTION */
+#portfolio-section{
+    padding: 100px 0;
+    display: flex;
+    flex-direction: column;
+}
+#portfolio-section .portfolio-header{
+    height: 220px;
+    background: url(images/image-font-12.png);
+    background-position: center;
+    background-size: cover;
+    place-items: center;
+}
+#portfolio-section .flex-portfolio-one{
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 50px 24px;
+}
+#portfolio-section .btn-all-project,
+#portfolio-section .btn-coded-project,
+#portfolio-section .btn-designed-project{
+    max-width: 400px;
+    width: 150px;
+    padding: 15px;
+    text-align: center;
+    color: var(--white);
+    border-bottom: 2px solid;
+    cursor: pointer;
+}
+#portfolio-section .btn-coded-project,
+#portfolio-section .btn-designed-project{
+    border-bottom-color: var(--gray-800);
+}
+#portfolio-section .grid-portfolio-two{
+    grid-template-columns: repeat(3, 1fr);
+}
+#portfolio-section .grid-portfolio-two .my-portfolio-images{
+    height: 100%;
+}
+#portfolio-section .content-text-black{
+    padding: 20px;
+    text-align: center;
+}
+#portfolio-section .position-relative{
+    position: relative;
+}
+#portfolio-section .text-content-card{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.5);
+}
+#portfolio-section .text-content-card h3{
+    margin-block: 18px 15px;
+    font-size: 1.5rem;
+}
+#portfolio-section .text-content-card .text-small{
+    font-size: 0.875rem;
+    color: var(--white);
+}
+#portfolio-section .text-content-card .ctn-btn{
+    align-items: center;
+    gap: 20px;
+}
 /* CONTACT SECTION */
 #contact-section{
     max-width: 1200px;
@@ -432,7 +509,14 @@ p{
     background-color: var(--black-700);
     color: var(--white);
 }
-.flex-footer a{
+.flex-footer .block-span{
+    display: block;
+    text-align: center;
+}
+.flex-footer .logo-return-top{
+    width: 32px;
+}
+.flex-footer .text-weight-600{
     font-weight: 600;
     color: var(--white);
 }
@@ -446,6 +530,8 @@ p{
 .flex-footer .font-weight-700{
     font-weight: 700;
 }
+
+
 
 /* LES MEDIAS QUERIES */
 @media (width <= 1150px){
@@ -597,6 +683,11 @@ p{
         display: none;
     }
 
+    /* PORTFOLIO SECTION */
+    #portfolio-section .grid-portfolio-two{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
 }
 
 @media (width <= 640px){
@@ -644,7 +735,7 @@ p{
     #contact-section form textarea::placeholder{
         font-weight: 400;
     }
-    
+
 }
 
 @media (width <= 600px){
@@ -699,6 +790,36 @@ p{
         right: 0;
         top: -30px;
     }
+
+    /* PORTFOLIO SECTION */
+    #portfolio-section .grid-portfolio-two{
+        grid-template-columns: 100%;
+        grid-template-rows: 300px 300px 300px;
+    }
+    #portfolio-section .grid-portfolio-two .grid-element-one,
+    #portfolio-section .grid-portfolio-two .grid-element-five,
+    #portfolio-section .grid-portfolio-two .grid-element-six{
+        display: none;
+    }
+    #portfolio-section .grid-portfolio-two .grid-element-two{
+        grid-column: 1;
+        grid-row: 1;
+    }
+    #portfolio-section .grid-portfolio-two .grid-element-three{
+        grid-column: 1;
+        grid-row: 2;
+    }
+    #portfolio-section .grid-portfolio-two .grid-element-for{
+        grid-column: 1;
+        grid-row: 3;
+    }
+    #portfolio-section .grid-portfolio-two .text-content-card{
+        padding-inline: 24px;
+    }
+    #portfolio-section .grid-portfolio-two .text-small{
+        text-align: center;
+    }
+    
 }
 
 @media (width <= 280px){
