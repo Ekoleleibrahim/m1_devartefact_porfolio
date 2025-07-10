@@ -6,44 +6,47 @@
     <title>Portfolio | Thomasz Gajda</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/d498f45440.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="banniere">
-        <!-- ENTETE DU SITE -->
+    <div class="wrapper">
+        <!-- SITE HEADER -->
         <header id="main-header">
             <div>
-                <a href="index.html" id="title">
+                <a href="index.html">
                     <img src="images/logo.png" alt="Gajda">
                 </a>
             </div>
-            <div>
-                <nav>
-                    <ul class="flex">
+            <div class="container-navbar">
+                <nav class="navbar">
+                    <ul class="flex flex-navbar">
                         <li>
-                            <a href="#">About me</a>
+                            <a href="#" class="main-header-link">About me</a>
                         </li>
                         <li>
-                            <a href="#">Skills</a>
+                            <a href="#" class="main-header-link">Skills</a>
                         </li>
                         <li>
-                            <a href="#">Portfolio</a>
+                            <a href="#" class="main-header-link">Portfolio</a>
                         </li>
                         <li>
-                            <a href="#" id="active">Contact me</a>
+                            <a href="#" class="active">Contact me</a>
                         </li>
                     </ul>
                 </nav>
             </div>
         </header>
-        <!-- ENTETE DU SITE -->
+        <!-- SITE HEADER -->
 
-        <!-- SECTION PRESENTATION -->
-        <section id="section-presentation">
-            <div class="firstelement">
+        <!-- PRESENTATION SECTION-->
+        <section id="presentation-section">
+            <div class="first-element">
                 <div>
-                    <p>Hi, I am</p>
+                    <p class="text-md">Hi, I am</p>
                     <h1>Tomasz Gajda</h1>
-                    <p>Front-end Developer / UI Designer</p>
+                    <p class="text-gray-800">Front-end Developer / UI Designer</p>
                 </div>
                 <div class="reseaux-contact flex">
                     <a href="#">
@@ -60,29 +63,29 @@
             <div class="position-relative">
                 <img src="images/m1_photoFortfolio.png" alt="Tomasz Gajda">
 
-                <div class="description-image">this is not my photo, but I dearly hope to get one just like this</div>
+                <div class="description-image text-justify">this is not my photo, but I dearly hope to get one just like this</div>
             </div>
         </section>
-        <!-- SECTION PRESENTATION -->
+        <!-- PRESENTATION SECTION -->
 
-        <!-- SECTION BERRIES -->
-        <section id="section-berries">
-            <div>
-                <h1>IT BERRIES</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, laboriosam, deleniti eum dolorum eveniet perspiciatis similique quidem, ipsa architecto inventore magnam nihil minus aspernatur odit. Quas et inventore quidem expedita beatae nesciunt blanditiis voluptatum! Totam officia sint doloremque non autem, neque amet enim ex porro cum. Tenetur necessitatibus dolore qui?</p>
+        <!-- BERRIES SECTION -->
+        <section id="berries-section">
+            <div class="max-w-lg">
+                <h2>IT BERRIES</h2>
+                <p class="text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, laboriosam, deleniti eum dolorum eveniet perspiciatis similique quidem, ipsa architecto inventore magnam nihil minus aspernatur odit. Quas et inventore quidem expedita beatae nesciunt blanditiis voluptatum! Totam officia sint doloremque non autem, neque amet enim ex porro cum. Tenetur necessitatibus dolore qui?</p>
                 <div class="ctn-btn">
                     <a href="#">READ MORE</a>
                 </div>
             </div>
         </section>
-        <!-- SECTION BERRIES -->
+        <!-- BERRIES SECTION -->
     </div>
 
     <main>
-        <!-- SECTION ABOUT -->
-        <section id="section-about">
-            <h1>ABOUT ME</h1>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi sequi illum autem temporibus earum perspiciatis minima iure aut cumque corporis, laboriosam nemo voluptate odit ut, sed hic expedita, similique accusamus.</p>
+        <!-- ABOUT SECTION -->
+        <section id="about-section">
+            <h2>ABOUT ME</h2>
+            <p class="text-center">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi sequi illum autem temporibus earum perspiciatis minima iure aut cumque corporis, laboriosam nemo voluptate odit ut, sed hic expedita, similique accusamus.</p>
             <p class="hidden">Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum quae voluptatibus quas tempore. Vitae ex ab ipsa dignissimos natus fuga, non animi asperiores ipsam officia, commodi beatae sint accusamus accusantium eos corrupti neque et tenetur tempora suscipit molestias nam voluptatem, libero necessitatibus? Voluptate ratione nesciunt quasi porro in asperiores unde neque laboriosam nobis inventore itaque accusamus, sequi dolore officiis rem soluta perferendis illum laudantium ipsam maiores id similique? Deserunt adipisci soluta quisquam nisi modi, tenetur aperiam nesciunt sit vero dolorum facere incidunt tempore suscipit consequuntur voluptatibus quo. Asperiores molestiae dolorum pariatur temporibus eveniet blanditiis eos odio deserunt provident, nam maiores.</p>
             <div class="ctn-btn">
                 <a href="#">READ MORE</a>
@@ -92,117 +95,117 @@
             </div>
 
             <div class="flex flex-about">
-                <article>
-                    <h2>DESIGN</h2>
+                <div class="article article-one">
+                    <h3>DESIGN</h3>
                     <p>I can design the site based on your needs and suggestions. I can also design the site from scratch and consult you during the job.</p>
-                </article>
-                <article>
-                    <h2>DEVELOPMENT</h2>
+                </div>
+                <div class="article article-two">
+                    <h3>DEVELOPMENT</h3>
                     <p>I can design the site based on your needs and suggestions. I can also design the site from scratch and consult you during the job.</p>
-                </article>
-                <article>
-                    <h2>MAINTENANCE</h2>
+                </div>
+                <div class="article article-three">
+                    <h3>MAINTENANCE</h3>
                     <p>I can design the site based on your needs and suggestions. I can also design the site from scratch and consult you during the job.</p>
-                </article>
+                </div>
             </div>
             <div class="separate-black">
                 <img src="images/separatorBlack 1.png" alt="separate black">
             </div>
         </section>
-        <!-- SECTION ABOUT -->
+        <!-- ABOUT SECTION -->
 
-        <!-- SECTION SKILLS -->
-        <section id="section-skills">
-            <h1>SKILLS</h1>
+        <!-- SKILLS SECTION -->
+        <section id="skills-section">
+            <h2>SKILLS</h2>
             <div class="flex content-skills">
                 <div class="skills-using">
-                    <h2>USING NOW</h2>
+                    <h3>USING NOW</h3>
                     <div class="grid grid-one-section-skills">
                         <figure>
-                            <img src="images/html.svg" alt="html">
+                            <img class="language-logo" src="images/html.svg" alt="html">
                             <figcaption>HTML5</figcaption>
                         </figure>
                         <figure>
-                            <img src="images/css.svg" alt="css">
+                            <img class="language-logo" src="images/css.svg" alt="css">
                             <figcaption>CSS3</figcaption>
                         </figure>
                         <figure>
-                            <img src="images/sass.svg" alt="sass">
+                            <img class="language-logo" src="images/sass.svg" alt="sass">
                             <figcaption>SASS</figcaption>
                         </figure>
                         <figure>
-                            <img src="images/javascript.svg" alt="javascript">
+                            <img class="language-logo" src="images/javascript.svg" alt="javascript">
                             <figcaption>JAVASCRIPT</figcaption>
                         </figure>
                         <figure>
-                            <img src="images/react.svg" alt="react">
+                            <img class="language-logo" src="images/react.svg" alt="react">
                             <figcaption>REACT</figcaption>
                         </figure>
                         <figure>
-                            <img src="images/bootstrap.svg" alt="bootstrap">
+                            <img class="language-logo" src="images/bootstrap.svg" alt="bootstrap">
                             <figcaption>BOOTSTRAP</figcaption>
                         </figure>
                         <figure>
-                            <img src="images/git.svg" alt="git">
+                            <img class="language-logo" src="images/git.svg" alt="git">
                             <figcaption>GIT</figcaption>
                         </figure>
                         <figure>
-                            <img src="images/figma.svg" alt="figcaption">
+                            <img class="language-logo" src="images/figma.svg" alt="figcaption">
                             <figcaption>FIGMA</figcaption>
                         </figure>
                     </div>
                 </div>
                 <div class="skills-learning">
-                    <h2>LEARNING:</h2>
+                    <h3>LEARNING:</h3>
                     <div class="grid grid-one-section-skills">
                         <figure>
-                            <img src="images/Group.png" alt="nodejs">
+                            <img class="language-logo" src="images/Group.png" alt="nodejs">
                             <figcaption>NODEJS</figcaption>
                         </figure>
                         <figure>
-                            <img src="images/mysql.svg" alt="mysql">
+                            <img class="language-logo" src="images/mysql.svg" alt="mysql">
                             <figcaption>MYSQL</figcaption>
                         </figure>
                         <figure>
-                            <img src="images/mongDb.png" alt="mongDb" class="mongodb">
+                            <img class="language-logo mongodb" src="images/mongDb.png" alt="mongDb">
                             <figcaption>MONGODB</figcaption>
                         </figure>
                         <figure>
-                            <img src="images/ts.png" alt="typescript">
+                            <img class="language-logo" src="images/ts.png" alt="typescript">
                             <figcaption>TYPESCRIPT</figcaption>
                         </figure>
                     </div>
                 </div>
                 <div class="other-skills">
-                    <h2>OTHERS SKILLS:</h2>
+                    <h3>OTHERS SKILLS:</h3>
                     <div class="grid grid-one-section-skills">
                         <figure>
-                            <img src="images/british.svg" alt="english">
+                            <img class="language-logo" src="images/british.svg" alt="english">
                             <figcaption>ANGIELSKI <br> C1/C2</figcaption>
                         </figure>
                         <figure>
-                            <img src="images/spagnol.svg" alt="spagnol">
+                            <img class="language-logo" src="images/spagnol.svg" alt="spagnol">
                             <figcaption>HISZPANKSKI <br> B1/B2</figcaption>
                         </figure>
                         <figure>
-                            <img src="images/languageCplusplus.svg" alt="C++">
+                            <img class="language-logo" src="images/languageCplusplus.svg" alt="C++">
                             <figcaption>C++</figcaption>
                         </figure>
                         <figure>
-                            <img src="images/languageC.svg" alt="languageC">
+                            <img class="language-logo" src="images/languageC.svg" alt="languageC">
                             <figcaption>C</figcaption>
                         </figure>
                     </div>
                 </div>
             </div>
         </section>
-        <!-- SECTION SKILLS -->
+        <!-- SKILLS SECTION -->
 
-        <!-- SECTION CONTACT -->
-        <section id="section-contact">
-            <header>
-                <h1>CONTACT</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente quod minima nostrum reiciendis a, expedita ipsam, atque nesciunt culpa, praesentium quia saepe iure aspernatur aliquam inventore ducimus quae quisquam sit.</p>
+        <!-- CONTACT SECTION -->
+        <section id="contact-section">
+            <header class="header-contact">
+                <h2>CONTACT</h2>
+                <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente quod minima nostrum reiciendis a, expedita ipsam, atque nesciunt culpa, praesentium quia saepe iure aspernatur aliquam inventore ducimus quae quisquam sit.</p>
                 <div class="separate-black">
                     <img src="images/separatorBlack 1.png" alt="separate black">
                 </div>
@@ -223,34 +226,34 @@
                     <textarea id="message" placeholder="your message*"></textarea>
                 </div>
                 <div>
-                    <button type="submit">SUBMIT</button>
+                    <button type="submit" class="submit-button">SUBMIT</button>
                 </div>
             </form>
         </section>
-        <!-- SECTION CONTACT -->
+        <!-- CONTACT SECTION -->
     </main>
 
-    <!-- FOOTER DU SITE -->
-    <footer class="flex">
+    <!-- SITE FOOTER -->
+    <footer class="flex flex-footer">
         <div>
             <a href="#">BACK TO TOP</a>
         </div>
         <div class="flex links-reseaux">
             <div>
-                <img src="images/facebook.svg" alt="logo de facebook">
+                <img class="footer-logo-contact" src="images/facebook.svg" alt="logo de facebook">
             </div>
             <div>
-                <img src="images/likendin.svg" alt="logo de likendin">
+                <img class="footer-logo-contact" src="images/likendin.svg" alt="logo de likendin">
             </div>
             <div>
-                <img src="images/istagram.svg" alt="logo instagram">
+                <img class="footer-logo-contact" src="images/istagram.svg" alt="logo instagram">
             </div>
             <div>
-                <img src="images/mail.svg" alt="logo de email">
+                <img class="footer-logo-contact" src="images/mail.svg" alt="logo de email">
             </div>
         </div>
-        <p><span>&commat;2020 Tomasz Gajda</span> All Rights Reserved.</p>
+        <p><span class="font-weight-700">&commat;2020 Tomasz Gajda</span> All Rights Reserved.</p>
     </footer>
-
+    <!-- SITE FOOTER -->
 </body>
 </html>
