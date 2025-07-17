@@ -9,24 +9,20 @@
 
 /* MY COLOR VARIABLES */
 :root{
-    --black: #000;
-    --black-50: rgba(0, 0, 0, 0.5);
-    --black-700: #1d1d1d;
-    --white: #fff;
-    --gray-50: #ededed;
-    --gray-200: #cdcdcd;
+    --orange-700: #dd5e3f;
+    --yellow-50: #eadaad;
     --gray-800: #676767;
 }
 ::selection{
-    background-color: var(--black-700);
-    color: white;
+    background-color: var(--orange-700);
+    color: var(--yellow-50);
 }
 
 /* BASIC STYLES */
 body{
     font-family: "Montserrat", sans-serif;
     font-size: 1.0625rem;
-    background-color: var(--gray-50);
+    background-color: var(--yellow-50);
 }
 img{
     width: 100%;
@@ -47,9 +43,11 @@ h2{
 h3{
     font-size: 1.5rem;
     line-height: 1.3;
+    color: var(--orange-700);
 }
 p{
     line-height: 1.4;
+    color: var(--orange-700);
 }
 .text-justify{
     text-align: justify;
@@ -68,9 +66,9 @@ p{
 }
 .ctn-btn a{
     padding: 10px 14px;
-    color: var(--white);
-    border-left: 3px solid var(--white);
-    border-right: 3px solid var(--white);
+    color: var(--yellow-50);
+    border-left: 3px solid var(--yellow-50);
+    border-right: 3px solid var(--yellow-50);
     position: relative;
     z-index: 1;
 }
@@ -83,13 +81,13 @@ p{
     top: 0;
     left: 0;
     z-index: -1;
-    background-color: var(--white);
+    background-color: var(--yellow-50);
     transform: scaleX(0);
     transform-origin: left;
     transition: transform 300ms ease-in-out;
 }
 .ctn-btn a:hover{
-    color: var(--black);
+    color: var(--orange-700);
     border: none;
 }
 .ctn-btn a:hover::before{
@@ -100,7 +98,8 @@ p{
 #contact-section h2,
 #portfolio-section h2{
     width: 200px;
-    border: 5px solid var(--black);
+    border: 5px solid var(--orange-700);
+    color: var(--orange-700);
     padding: 10px;
     margin: 0 auto 30px;
     text-align: center;
@@ -109,10 +108,10 @@ p{
     margin-top: 100px;
 }
 .bg-black{
-    background-color: var(--black-700);
+    background-color: var(--orange-700);
 }
 .text-white{
-    color: var(--white);
+    color: var(--yellow-50);
 }
 
 /* SITE HEADER */
@@ -128,7 +127,7 @@ p{
     bottom: 0;
     width: 60vw;
     height: 100%;
-    background-color: var(--black);
+    background-color: var(--orange-700);
     z-index: -1;
     clip-path: polygon(12.5% 0%, 100% 0%, 99.1% 100%, 0% 100%);
 
@@ -145,20 +144,27 @@ p{
     display: none;
 }
 #main-header .burger-btn{
-    font-size: 20px;
-    font-weight: 700;
-    letter-spacing: 3px;
-    color: var(--white);
+    display: block;
+    color: var(--orange-700) !important;
     transform: rotate(90deg);
     cursor: pointer;
+    position: relative;
     display: none;
+}
+#main-header .burger-btn span{
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: var(--orange-700);
+    border-radius: 50%;
+    
 }
 #main-header .flex-navbar{
     align-items: center;
     gap: 50px;
 }
 #main-header .main-header-link{
-    color: var(--white);
+    color: var(--yellow-50);
     position: relative;
 }
 #main-header .main-header-link::before,
@@ -172,7 +178,7 @@ p{
     width: 100%;
     height: 2px;
     border-radius: 9999px;
-    background-color: var(--white);
+    background-color: var(--yellow-50);
     transform: scaleX(0);
     transform-origin: left;
     transition: transform 0.2s linear;
@@ -184,8 +190,8 @@ p{
 }
 #main-header .active{
     padding: 12px 20px;
-    background-color: var(--white);
-    color: var(--black);
+    background-color: var(--yellow-50);
+    color: var(--orange-700);
     border-radius: 9999px;
     text-transform: uppercase;
 }
@@ -202,14 +208,16 @@ p{
 #presentation-section .first-element .text-md{
     font-size: 1.75rem;
     font-weight: 700;
+    color: var(--orange-700);
 }
 #presentation-section h1{
     font-size: 2.875rem;
     margin-top: 30px;
     letter-spacing: 3px;
+    color: var(--orange-700);
 }
 #presentation-section .text-gray-800{
-    color: var(--gray-800);
+    color: var(--orange-700);
     font-weight: 700;
 }
 #presentation-section .reseaux-contact{
@@ -222,9 +230,12 @@ p{
     height: 50px;
     display: grid;
     place-content: center;
-    background-color: var(--gray-200);
-    box-shadow: 0 2px 1px var(--black-50),
-                -1px 0 1px var(--black-50);
+    background-color: var(--yellow-50);
+    box-shadow: 0 0px 1px var(--orange-700),
+                -1px 0 1px var(--orange-700) inset;
+}
+#presentation-section .reseaux-contact i{
+    color: var(--orange-700);
 }
 #presentation-section .position-relative{
     position: relative;
@@ -236,11 +247,13 @@ p{
     right: 180px;
     bottom: 10px;
     line-height: 1.1;
+    color: var(--orange-700);
 }
 
 /* BERRIES SECTION */
 #berries-section{
-    background: var(--black-700) url(images/logoITB.png) no-repeat 100% 0%;
+    background: var(--orange-700) url(images/logoITB.png) no-repeat 100% 30%;
+    position: relative;
 }
 #berries-section .max-w-lg{
     max-width: 1000px;
@@ -248,10 +261,10 @@ p{
 }
 #berries-section h2{
     margin-bottom: 14px;
-    color: var(--white);
+    color: var(--yellow-50);
 }
 #berries-section .text-justify{
-    color: var(--white);
+    color: var(--yellow-50);
 }
 
 /* SECTION ABOUT */
@@ -270,15 +283,15 @@ p{
     margin-block: 50px;
 }
 #about-section .ctn-btn a{
-    color: var(--black);
-    border-left-color: var(--black);
-    border-right-color: var(--black);
+    color: var(--orange-700);
+    border-left-color: var(--orange-700);
+    border-right-color: var(--orange-700);
 }
 #about-section .ctn-btn a::before{
-    background-color: var(--black);
+    background-color: var(--orange-700);
 }
 #about-section .ctn-btn a:hover{
-    color: var(--white);
+    color: var(--yellow-50);
 }
 #about-section .flex-about{
     margin-top: 80px;
@@ -292,6 +305,7 @@ p{
 #about-section .flex-about .article h3{
     margin-bottom: 14px;
     position: relative;
+    color: var(--orange-700);
 }
 #about-section .flex-about .article-one h3::before{
     content: url(images/pen_log.png);
@@ -335,6 +349,9 @@ p{
     width: 100%;
     text-align: center;
 }
+.grid-one-section-skills figure figcaption{
+    color: var(--orange-700);
+}
 #skills-section .grid-one-section-skills figure:nth-child(even),
  #skills-section .grid-one-section-skills figure:nth-child(odd){
     display: flex;
@@ -364,6 +381,10 @@ p{
     background-size: cover;
     place-items: center;
 }
+#portfolio-section h2{
+    border-color: var(--yellow-50);
+    color: var(--yellow-50);
+}
 #portfolio-section .flex-portfolio-one{
     justify-content: center;
     align-items: center;
@@ -378,7 +399,7 @@ p{
     width: 150px;
     padding: 15px;
     text-align: center;
-    color: var(--white);
+    color: var(--yellow-50);
     border-bottom: 2px solid;
     cursor: pointer;
 }
@@ -417,7 +438,7 @@ p{
 }
 #portfolio-section .text-content-card .text-small{
     font-size: 0.875rem;
-    color: var(--white);
+    color: var(--yellow-50);
 }
 #portfolio-section .text-content-card .ctn-btn{
     align-items: center;
@@ -452,9 +473,10 @@ p{
     font-size: 0.875rem;
     border: none;
     outline: none;
-    background-color: var(--gray-50);
-    border-left: 4px solid var(--black);
-    border-bottom: 4px solid var(--black);
+    background-color: var(--yellow-50);
+    border-left: 4px solid var(--orange-700);
+    border-bottom: 4px solid var(--orange-700);
+    color: var(--orange-700);
 }
 #contact-section form textarea{
     resize: none;
@@ -465,6 +487,7 @@ p{
     text-transform: uppercase;
     font-size: 1rem;
     font-weight: 700;
+    color: var(--orange-700);
 }
 #contact-section form div:nth-child(5){
     align-self: center;
@@ -477,10 +500,10 @@ p{
     padding: 10px;
     margin-top: 10px;
     font-weight: 700;
-    color: var(--black);
-    border-left: 3px solid var(--black);
-    border-right: 3px solid var(--black);
-    background-color: var(--gray-50);
+    color: var(--orange-700);
+    border-left: 3px solid var(--orange-700);
+    border-right: 3px solid var(--orange-700);
+    background-color: var(--yellow-50);
     position: relative;
     z-index: 1;
     cursor: pointer;
@@ -496,17 +519,17 @@ p{
     right: 0;
     bottom: 0;
     z-index: -1;
-    background-color: var(--black);
+    background-color: var(--orange-700);
     transform: scaleX(0);
     transform-origin: left;
     transition: transform 300ms ease-in-out;
 }
 #contact-section form .submit-button:hover{
-    color: var(--white);
+    color: var(--yellow-50);
     border: none;
 }
 #contact-section form .submit-button:focus{
-    outline: 2px solid var(--black-700);
+    outline: 2px solid var(--orange-700);
     outline-offset: 2px;
 }
 #contact-section form .submit-button:hover::before{
@@ -519,8 +542,11 @@ p{
     flex-direction: column;
     align-items: center;
     gap: 20px;
-    background-color: var(--black-700);
+    background-color: var(--orange-700);
     color: var(--white);
+}
+.flex-footer p{
+    color: var(--yellow-50);
 }
 .flex-footer .block-span{
     display: block;
@@ -531,7 +557,7 @@ p{
 }
 .flex-footer .text-weight-600{
     font-weight: 600;
-    color: var(--white);
+    color: var(--yellow-50);
 }
 .flex-footer .links-reseaux{
     align-items: center;
@@ -542,6 +568,7 @@ p{
 }
 .flex-footer .font-weight-700{
     font-weight: 700;
+    color: var(--yellow-50);
 }
 
 
@@ -619,7 +646,7 @@ p{
 @media (width <= 885px){
     /* SITE HEADER */
     #main-header{
-        padding: 30px;
+        padding: 30px 24px;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -641,7 +668,7 @@ p{
         bottom: -2px;
         width: 100%;
         height: 400px;
-        background-color: rgba(119, 119, 119, 0.7);
+        background-color: var(--yellow-50);
         z-index: 1;
         clip-path: polygon(0 59%, 100% 34%, 100% 100%, 0% 100%);
     }
@@ -673,7 +700,6 @@ p{
     }
     #presentation-section .reseaux-contact i{
         width: 14px;
-        color: white;
     }
     #presentation-section h1{
         font-size: 2rem;
@@ -682,14 +708,13 @@ p{
     #presentation-section h1,
     #presentation-section .text-md,
     #presentation-section .text-gray-800{
-        color: var(--white);
+        color: var(--orange-700);
     }
     #presentation-section .position-relative{
         align-self: flex-end;
     }
     #presentation-section img{
         position: relative;
-        z-index: 1;
     }
     #presentation-section .description-image{
         display: none;
@@ -757,18 +782,24 @@ p{
         color: var(--black);
     }
     #main-header .navbar{
-        position: absolute;
-        width: 100%;
+        display: grid;
+        place-items: center;
+        position: fixed;
+        width: 80vw;
+        height: 100%;
         left: 0;
-        top: 100%;
-        background-color: var(--black-700);
+        top: 0;
+        bottom: 0;
+        right: 0;
+        background-color: var(--yellow-50);
         border-top: 2px solid var(--white);
-        z-index: 1000;
-        transform: scaleY(0);
-        transform-origin: 50% top;
+        z-index: 5000 !important;
+        transform: scaleX(0);
+        transform-origin: left 50%;
         opacity: 0;
         visibility: hidden;
         transition: transform 0.2s ease-in-out;
+        box-shadow: 1px 0 0 rgba(0, 0, 0, 0.2);
     }
     #main-header .flex-navbar{
         flex-direction: column;
@@ -778,9 +809,10 @@ p{
     #main-header .flex-navbar .main-header-link,
     #main-header .flex-navbar .active{
         display: block;
+        font-size: 2rem;
         width: 100%;
         padding-block: 20px;
-        color: var(--white);
+        color: var(--orange-700);
         text-align: center;
         background-color: transparent;
     }
@@ -789,13 +821,15 @@ p{
     }
     #main-header .flex-navbar .main-header-link:hover,
     #main-header .flex-navbar .active:hover{
-        background-color: var(--white);
         color: var(--black);
+    }
+    #burger-btn:checked .burger-btn span:nth-child(1){
+        transform: scale(2) !important;
     }
     #burger-btn:checked ~ .navbar{
         opacity: 1;
         visibility: visible;
-        transform: scaleY(1);
+        transform: scaleX(1);
     }
     /* PRESENTATION SECTION */
     #presentation-section .position-relative{
@@ -826,7 +860,7 @@ p{
         transition: all 0.4s ease-in-out;
     }
     #about-section .flex-about .article:hover{
-        background-color: var(--white);
+        background-color: white;
         box-shadow: 0 0 1px var(--gray-800);
         transform: translateY(-10px);
     }
