@@ -97,7 +97,7 @@ p{
 #skills-section h2,
 #contact-section h2,
 #portfolio-section h2{
-    width: 200px;
+    width: 300px;
     border: 5px solid var(--orange-700);
     color: var(--orange-700);
     padding: 10px;
@@ -719,6 +719,13 @@ p{
     #presentation-section .description-image{
         display: none;
     }
+    /* SECTION BERRIES */
+    #berries-section .max-w-lg{
+        background: var(--orange-700);
+    }
+    #berries-section h2{
+        text-align: center;
+    }
 
     /* PORTFOLIO SECTION */
     #portfolio-section .grid-portfolio-two{
@@ -730,6 +737,7 @@ p{
 @media (width <= 640px){
     /* SECTION BERRIES */
     #berries-section .max-w-lg{
+        background: var(--orange-700);
         max-width: 1000px;
         padding: 30px;
         text-align: justify;
