@@ -12,6 +12,8 @@
     --orange-700: #dd5e3f;
     --yellow-50: #eadaad;
     --gray-800: #676767;
+    --black: #000;
+    --white: #fff;
 }
 ::selection{
     background-color: var(--orange-700);
@@ -43,11 +45,11 @@ h2{
 h3{
     font-size: 1.5rem;
     line-height: 1.3;
-    color: var(--orange-700);
+    color: var(--black);
 }
 p{
     line-height: 1.4;
-    color: var(--orange-700);
+    color: var(--black);
 }
 .text-justify{
     text-align: justify;
@@ -98,8 +100,8 @@ p{
 #contact-section h2,
 #portfolio-section h2{
     width: 300px;
-    border: 5px solid var(--orange-700);
-    color: var(--orange-700);
+    border: 5px solid var(--black);
+    color: var(--black);
     padding: 10px;
     margin: 0 auto 30px;
     text-align: center;
@@ -112,6 +114,9 @@ p{
 }
 .text-white{
     color: var(--yellow-50);
+}
+strong{
+    font-weight: 500;
 }
 
 /* SITE HEADER */
@@ -191,7 +196,7 @@ p{
 #main-header .active{
     padding: 12px 20px;
     background-color: var(--yellow-50);
-    color: var(--orange-700);
+    color: var(--black);
     border-radius: 9999px;
     text-transform: uppercase;
 }
@@ -208,16 +213,16 @@ p{
 #presentation-section .first-element .text-md{
     font-size: 1.75rem;
     font-weight: 700;
-    color: var(--orange-700);
+    color: var(--black);
 }
 #presentation-section h1{
     font-size: 2.875rem;
     margin-top: 30px;
     letter-spacing: 3px;
-    color: var(--orange-700);
+    color: var(--black);
 }
 #presentation-section .text-gray-800{
-    color: var(--orange-700);
+    color: var(--black);
     font-weight: 700;
 }
 #presentation-section .reseaux-contact{
@@ -247,7 +252,7 @@ p{
     right: 180px;
     bottom: 10px;
     line-height: 1.1;
-    color: var(--orange-700);
+    color: var(--black);
 }
 
 /* BERRIES SECTION */
@@ -305,7 +310,7 @@ p{
 #about-section .flex-about .article h3{
     margin-bottom: 14px;
     position: relative;
-    color: var(--orange-700);
+    color: var(--black);
 }
 #about-section .flex-about .article-one h3::before{
     content: url(images/pen_log.png);
@@ -341,6 +346,7 @@ p{
 }
 #skills-section .grid-one-section-skills{
     margin-top: 50px;
+    margin-left: 50px;
     grid-template-columns: repeat(4, 1fr);
     gap: 60px;
 }
@@ -350,7 +356,7 @@ p{
     text-align: center;
 }
 .grid-one-section-skills figure figcaption{
-    color: var(--orange-700);
+    color: var(--black);
 }
 #skills-section .grid-one-section-skills figure:nth-child(even),
  #skills-section .grid-one-section-skills figure:nth-child(odd){
@@ -363,10 +369,10 @@ p{
     height: auto;
     margin-bottom: 20px;
 }
-#skills-section .grid-one-section-skills figure .mongodb{
+/* #skills-section .grid-one-section-skills figure .mongodb{
     width: 35px;
     height: auto;
-}
+} */
 
 /* PORTFOLIO SECTION */
 #portfolio-section{
@@ -382,8 +388,8 @@ p{
     place-items: center;
 }
 #portfolio-section h2{
-    border-color: var(--yellow-50);
-    color: var(--yellow-50);
+    border-color: var(--black);
+    color: var(--black);
 }
 #portfolio-section .flex-portfolio-one{
     justify-content: center;
@@ -430,7 +436,7 @@ p{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0.4);
 }
 #portfolio-section .text-content-card h3{
     margin-block: 18px 15px;
@@ -474,9 +480,9 @@ p{
     border: none;
     outline: none;
     background-color: var(--yellow-50);
-    border-left: 4px solid var(--orange-700);
-    border-bottom: 4px solid var(--orange-700);
-    color: var(--orange-700);
+    border-left: 4px solid var(--black);
+    border-bottom: 4px solid var(--black);
+    color: var(--black);
 }
 #contact-section form textarea{
     resize: none;
@@ -487,7 +493,7 @@ p{
     text-transform: uppercase;
     font-size: 1rem;
     font-weight: 700;
-    color: var(--orange-700);
+    color: var(--black);
 }
 #contact-section form div:nth-child(5){
     align-self: center;
@@ -547,6 +553,7 @@ p{
 }
 .flex-footer p{
     color: var(--yellow-50);
+    font-size: 0.875rem;
 }
 .flex-footer .block-span{
     display: block;
@@ -585,13 +592,13 @@ p{
         bottom: 0;
         width: 70vw;
         height: 50%;
-        background-color: var(--black);
+        background-color: var(--orange-700);
         z-index: -50;
         clip-path: none;
         display: none;
     }
     #main-header .main-header-link{
-        color: var(--black);
+        color: var(--orange-700);
         position: relative;
     }
     #main-header .main-header-link::before,
@@ -605,7 +612,7 @@ p{
         width: 100%;
         height: 2px;
         border-radius: 9999px;
-        background-color: var(--black);
+        background-color: var(--orange-700);
         transform: scaleX(0);
         transform-origin: left;
         transition: transform 0.2s linear;
@@ -617,10 +624,10 @@ p{
     }
     #main-header .active{
         padding: 12px 20px;
-        background-color: var(--black);
-        color: var(--white);
         border-radius: 9999px;
         text-transform: uppercase;
+        background-color: var(--orange-700);
+        color: var(--yellow-50);
     }
     /* SECTION PRESENTATION */
     #presentation-section {
@@ -645,6 +652,58 @@ p{
 
 @media (width <= 885px){
     /* SITE HEADER */
+    #main-header .burger-btn{
+        display: inline-block;
+        color: var(--black);
+    }
+    #main-header .navbar{
+        display: grid;
+        place-items: center;
+        position: fixed;
+        width: 80vw;
+        height: 100%;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        background-color: var(--yellow-50);
+        border-top: 2px solid var(--white);
+        z-index: 5000 !important;
+        transform: scaleX(0);
+        transform-origin: left 50%;
+        opacity: 0;
+        visibility: hidden;
+        transition: transform 0.2s ease-in-out;
+        box-shadow: 1px 0 0 rgba(0, 0, 0, 0.2);
+    }
+    #main-header .flex-navbar{
+        flex-direction: column;
+        align-items: normal;
+        gap: 0;
+    }
+    #main-header .flex-navbar .main-header-link,
+    #main-header .flex-navbar .active{
+        display: block;
+        font-size: 2rem;
+        width: 100%;
+        padding-block: 20px;
+        color: var(--orange-700);
+        text-align: center;
+        background-color: transparent;
+    }
+    #main-header .flex-navbar .active{
+        border-radius: 0;
+    }
+    
+    #burger-btn:checked .burger-btn span:nth-child(1){
+        transform: scale(2) !important;
+    }
+    #burger-btn:checked ~ .navbar{
+        opacity: 1;
+        visibility: visible;
+        transform: scaleX(1);
+    }
+    /* SITE HEADER */
     #main-header{
         padding: 30px 24px;
         display: flex;
@@ -656,7 +715,6 @@ p{
         padding: 0 30px 30px 23px;
         gap: 0;
         flex-direction: column;
-        background-color: var(--black);
         position: relative;
     }
     #presentation-section::after{
@@ -765,6 +823,9 @@ p{
         grid-template-columns: repeat(2, 1fr);
         gap: 30px;
     }
+    #skills-section .grid-one-section-skills{
+        margin-left: 0;
+    }
 
     /* SECTION CONTACT */
     #contact-section{
@@ -784,61 +845,6 @@ p{
 }
 
 @media (width <= 600px){
-    /* SITE HEADER */
-    #main-header .burger-btn{
-        display: inline-block;
-        color: var(--black);
-    }
-    #main-header .navbar{
-        display: grid;
-        place-items: center;
-        position: fixed;
-        width: 80vw;
-        height: 100%;
-        left: 0;
-        top: 0;
-        bottom: 0;
-        right: 0;
-        background-color: var(--yellow-50);
-        border-top: 2px solid var(--white);
-        z-index: 5000 !important;
-        transform: scaleX(0);
-        transform-origin: left 50%;
-        opacity: 0;
-        visibility: hidden;
-        transition: transform 0.2s ease-in-out;
-        box-shadow: 1px 0 0 rgba(0, 0, 0, 0.2);
-    }
-    #main-header .flex-navbar{
-        flex-direction: column;
-        align-items: normal;
-        gap: 0;
-    }
-    #main-header .flex-navbar .main-header-link,
-    #main-header .flex-navbar .active{
-        display: block;
-        font-size: 2rem;
-        width: 100%;
-        padding-block: 20px;
-        color: var(--orange-700);
-        text-align: center;
-        background-color: transparent;
-    }
-    #main-header .flex-navbar .active{
-        border-radius: 0;
-    }
-    #main-header .flex-navbar .main-header-link:hover,
-    #main-header .flex-navbar .active:hover{
-        color: var(--black);
-    }
-    #burger-btn:checked .burger-btn span:nth-child(1){
-        transform: scale(2) !important;
-    }
-    #burger-btn:checked ~ .navbar{
-        opacity: 1;
-        visibility: visible;
-        transform: scaleX(1);
-    }
     /* PRESENTATION SECTION */
     #presentation-section .position-relative{
         align-self: center;
