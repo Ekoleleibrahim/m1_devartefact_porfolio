@@ -123,6 +123,10 @@ strong{
     border-bottom: 2px solid var(--yellow-50);
 }
 
+.visibility{
+    display: none;
+}
+
 /* SITE HEADER */
 .wrapper{
     position: relative;
