@@ -771,7 +771,7 @@ strong{
     #presentation-section h1,
     #presentation-section .text-md,
     #presentation-section .text-gray-800{
-        color: var(--orange-700);
+        color: var(--black);
     }
     #presentation-section .position-relative{
         align-self: flex-end;
