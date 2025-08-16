@@ -157,7 +157,11 @@ strong{
     display: none;
 }
 #main-header .burger-btn{
-    display: block;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    cursor: pointer;
+    display: none;
     color: var(--orange-700) !important;
     transform: rotate(90deg);
     cursor: pointer;
@@ -170,7 +174,6 @@ strong{
     height: 10px;
     background-color: var(--orange-700);
     border-radius: 50%;
-    
 }
 #main-header .flex-navbar{
     align-items: center;
@@ -442,7 +445,7 @@ strong{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.2);
     opacity: 0;
     visibility: 0;
     transition: all 300ms ease-in-out;
@@ -854,6 +857,52 @@ strong{
 }
 
 @media (width <= 600px){
+    /* SITE HEADER */
+    #main-header .burger-btn{
+        display: inline-block;
+        color: var(--black);
+    }
+    #main-header .navbar{
+        position: absolute;
+        width: 100%;
+        left: 0;
+        top: 100%;
+        background-color: var(--black-700);
+        border-top: 2px solid var(--white);
+        z-index: 1000;
+        transform: scaleY(0);
+        transform-origin: 50% top;
+        opacity: 0;
+        visibility: hidden;
+        transition: transform 0.2s ease-in-out;
+    }
+    #main-header .flex-navbar{
+        flex-direction: column;
+        align-items: normal;
+        gap: 0;
+    }
+    #main-header .flex-navbar .main-header-link,
+    #main-header .flex-navbar .active{
+        display: block;
+        width: 100%;
+        padding-block: 20px;
+        color: var(--white);
+        text-align: center;
+        background-color: transparent;
+    }
+    #main-header .flex-navbar .active{
+        border-radius: 0;
+    }
+    #main-header .flex-navbar .main-header-link:hover,
+    #main-header .flex-navbar .active:hover{
+        background-color: var(--white);
+        color: var(--black);
+    }
+    #burger-btn:checked ~ .navbar{
+        opacity: 1;
+        visibility: visible;
+        transform: scaleY(1);
+    }
     /* PRESENTATION SECTION */
     #presentation-section .position-relative{
         align-self: center;
