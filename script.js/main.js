@@ -25,15 +25,19 @@ for (let tab of tabsBtn) {
                 containersPositionRelative[4].classList.add("visibility");
                 break;
             case "construit":
-                containersPositionRelative[0].classList.remove("visibility");
-                containersPositionRelative[1].classList.remove("visibility");
+                containersPositionRelative[5].classList.remove("visibility");
+                containersPositionRelative[2].classList.remove("visibility");
                 containersPositionRelative[3].classList.remove("visibility");
-                containersPositionRelative[4].classList.remove("visibility");
+                containersPositionRelative[1].classList.remove("visibility");
                 break;
             default:
-                containersPositionRelative.forEach(function(container) {
-                    container.classList.remove("visibility");
-                })
+                containersPositionRelative[0].classList.remove("visibility");
+                containersPositionRelative[1].classList.remove("visibility");
+                containersPositionRelative[2].classList.remove("visibility");
+                containersPositionRelative[3].classList.remove("visibility");
+                containersPositionRelative[4].classList.remove("visibility");
+                containersPositionRelative[5].classList.remove("visibility");
+                break
         } 
         
         

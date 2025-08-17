@@ -147,7 +147,7 @@ strong{
 }
 #main-header{
     width: 100%;
-    padding: 30px 80px;
+    padding: 30px 50px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -220,6 +220,7 @@ strong{
 }
 #presentation-section .first-element{
     margin-top: 100px;
+    padding-bottom: 30px;
 }
 #presentation-section .first-element .text-md{
     font-size: 1.75rem;
@@ -250,25 +251,17 @@ strong{
     box-shadow: 0 0px 1px var(--orange-700),
                 -1px 0 1px var(--orange-700) inset;
 }
+#presentation-section img{
+    max-width: 800px;
+    height: 100%;
+}
 #presentation-section .reseaux-contact i{
     color: var(--orange-700);
-}
-#presentation-section .position-relative{
-    position: relative;
-}
-#presentation-section .description-image{
-    max-width: 200px;
-    margin-bottom: 10px;
-    position: absolute;
-    right: 180px;
-    bottom: 10px;
-    line-height: 1.1;
-    color: var(--black);
 }
 
 /* BERRIES SECTION */
 #berries-section{
-    background: var(--orange-700) url(images/logoITB.png) no-repeat 100% 30%;
+    background: var(--orange-700) url(images/logoITB.png) no-repeat 100% 0;
     position: relative;
 }
 #berries-section .max-w-lg{
@@ -641,9 +634,10 @@ strong{
         background-color: var(--orange-700);
         color: var(--yellow-50);
     }
+    
     /* SECTION PRESENTATION */
     #presentation-section {
-        padding: 0 30px;
+        padding: 0 50px;
         display: flex;
         justify-content: space-between;
         gap: 50px;
@@ -663,10 +657,19 @@ strong{
 }
 
 @media (width <= 885px){
+    body{
+        overflow-x: hidden;
+    }
     /* SITE HEADER */
+    #main-header{
+        padding: 30px 24px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
     #main-header .burger-btn{
         display: inline-block;
-        color: var(--black);
+        color: var(--orange-700);
     }
     #main-header .navbar{
         display: grid;
@@ -677,26 +680,23 @@ strong{
         left: 0;
         top: 0;
         bottom: 0;
-        right: 0;
         background-color: var(--yellow-50);
-        border-top: 2px solid var(--white);
         z-index: 5000 !important;
         transform: scaleX(0);
         transform-origin: left 50%;
         opacity: 0;
-        visibility: hidden;
-        transition: transform 0.2s ease-in-out;
+        transition: all 0.2s ease-in-out;
         box-shadow: 1px 0 0 rgba(0, 0, 0, 0.2);
     }
     #main-header .flex-navbar{
         flex-direction: column;
         align-items: normal;
-        gap: 0;
+        gap: 15px;
     }
     #main-header .flex-navbar .main-header-link,
     #main-header .flex-navbar .active{
         display: block;
-        font-size: 2rem;
+        font-size: 1.655rem;
         width: 100%;
         padding-block: 20px;
         color: var(--orange-700);
@@ -704,27 +704,17 @@ strong{
         background-color: transparent;
     }
     #main-header .flex-navbar .active{
-        border-radius: 0;
-    }
-    
-    #burger-btn:checked .burger-btn span:nth-child(1){
-        transform: scale(2) !important;
+        background-color: var(--orange-700);
+        color: var(--white);
     }
     #burger-btn:checked ~ .navbar{
         opacity: 1;
-        visibility: visible;
         transform: scaleX(1);
     }
-    /* SITE HEADER */
-    #main-header{
-        padding: 30px 24px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
+    
     /* SECTION PRESENTATION */
     #presentation-section {
-        padding: 0 30px 30px 23px;
+        padding: 0 30px 23px;
         gap: 0;
         flex-direction: column;
         position: relative;
@@ -744,6 +734,7 @@ strong{
     }
     #presentation-section .first-element{
         margin-top: 0;
+        padding-top: 10px;
         order: 1;
         display: flex;
         justify-content: space-around;
@@ -784,11 +775,9 @@ strong{
         align-self: flex-end;
     }
     #presentation-section img{
-        position: relative;
+        width: 600px;
     }
-    #presentation-section .description-image{
-        display: none;
-    }
+
     /* SECTION BERRIES */
     #berries-section .max-w-lg{
         background: var(--orange-700);
@@ -857,52 +846,6 @@ strong{
 }
 
 @media (width <= 600px){
-    /* SITE HEADER */
-    #main-header .burger-btn{
-        display: inline-block;
-        color: var(--black);
-    }
-    #main-header .navbar{
-        position: absolute;
-        width: 100%;
-        left: 0;
-        top: 100%;
-        background-color: var(--black-700);
-        border-top: 2px solid var(--white);
-        z-index: 1000;
-        transform: scaleY(0);
-        transform-origin: 50% top;
-        opacity: 0;
-        visibility: hidden;
-        transition: transform 0.2s ease-in-out;
-    }
-    #main-header .flex-navbar{
-        flex-direction: column;
-        align-items: normal;
-        gap: 0;
-    }
-    #main-header .flex-navbar .main-header-link,
-    #main-header .flex-navbar .active{
-        display: block;
-        width: 100%;
-        padding-block: 20px;
-        color: var(--white);
-        text-align: center;
-        background-color: transparent;
-    }
-    #main-header .flex-navbar .active{
-        border-radius: 0;
-    }
-    #main-header .flex-navbar .main-header-link:hover,
-    #main-header .flex-navbar .active:hover{
-        background-color: var(--white);
-        color: var(--black);
-    }
-    #burger-btn:checked ~ .navbar{
-        opacity: 1;
-        visibility: visible;
-        transform: scaleY(1);
-    }
     /* PRESENTATION SECTION */
     #presentation-section .position-relative{
         align-self: center;
